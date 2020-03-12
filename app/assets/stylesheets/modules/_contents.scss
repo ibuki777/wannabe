@@ -59,21 +59,27 @@
 }
 
 .btn{
-  color: #ffffff;
-  text-decoration: none;
+  // color: #ffffff;
+  // text-decoration: none;
   display: contents;
   font-size: 15px;
 
   &-description{
   transition: all  0.5s ease;
+  color: #ffffff;
+  text-decoration: none;
   }
 
   &-buy{
     transition: all  0.5s ease;
+    color: #ffffff;
+    text-decoration: none;
   }
 
   &-post{
     transition: all  0.5s ease;
+    color: #ffffff;
+    text-decoration: none;
   }
 }
 .user{
