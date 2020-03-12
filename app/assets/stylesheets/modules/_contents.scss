@@ -6,44 +6,66 @@
 .wrapper{
   height: 100vh;
   width: 100vw;
-  color: #ffffff;
+  // color: #ffffff;
+  color: red;
 }
 
-.bar{
-  background-color: rgba(10,10,10,0.23);
-  height: 150px;
+.contents{
+  height: calc(100% - 80px);
   width: 100%;
-
-  &__menu{
-    display: flex;
-    justify-content: space-between;
+  position: relative;
+  &__bar{
+    // background-color: rgba(10,10,10,0.23);
     height: 150px;
-    align-items: center;
-    margin: 0 120px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
 
-    &__logo{
+    &__menu{
+      display: flex;
+      justify-content: space-between;
+      height: 150px;
+      align-items: center;
+      margin: 0 120px;
+
+      &__logo{
+      }
+    }
+  }
+
+  &__name{
+    height: calc(100% - 230px);
+    position: absolute;
+    top: 150px;
+
+    &__letter{
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      // position: relative;
+
+      &__title{
+      line-height: calc(100vh - 230px);
+      font-size: 60px;
+      // position: absolute;
+      // top: 10px;
+      // left: 450px;
+
+      }
+
+      &__quote{
+        // position: absolute;
+        // bottom: 150px;
+        // left: 630px;
+        font-size: 20px;
+      }
     }
   }
 }
 
-
-.btn-description:hover {
-  text-decoration:underline;
-  color: #3e5fc0;
-}
-.btn-buy:hover {
-  text-decoration:underline;
-  color: #3e5fc0;
-}
-.btn-post:hover {
-  text-decoration:underline;
-  color: #3e5fc0;
-}
-.user:hover {
-  color: #3e5fc0;
-}
 .btn{
-  color: #ffffff;
+  // color: #ffffff;
+  color: red;
   text-decoration: none;
   display: contents;
   font-size: 15px;
@@ -61,7 +83,8 @@
   }
 }
 .user{
-  color: #ffffff;
+  // color: #ffffff;
+  color: red;
   text-decoration: none;
   font-size: 40px;
   transition: all  0.5s ease;
@@ -70,32 +93,20 @@
   }
 }
   
-
-.name{
-  height: calc(100% - 230px);
-
-  &__letter{
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    position: relative;
-
-    &__title{
-    line-height: calc(100vh - 230px);
-    font-size: 60px;
-    position: absolute;
-    top: 10px;
-    left: 450px;
-
-    }
-
-    &__quote{
-      position: absolute;
-      bottom: 150px;
-      left: 630px;
-      font-size: 20px;
-    }
-  }
+.btn-description:hover {
+  text-decoration:underline;
+  color: #3e5fc0;
+}
+.btn-buy:hover {
+  text-decoration:underline;
+  color: #3e5fc0;
+}
+.btn-post:hover {
+  text-decoration:underline;
+  color: #3e5fc0;
+}
+.user:hover {
+  color: #3e5fc0;
 }
 
 .posts{
