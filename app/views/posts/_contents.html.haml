@@ -3,14 +3,14 @@
   .contents__bar
     .contents__bar__menu
       = image_tag 'logo_xeno.jpg', alt: 'mark', height: '120px', width: '100px', class: 'contents__bar__menu__logo'
-      = link_to "#", class: "btn" do
-        %p.btn-description 
+      .btn
+        =link_to "/about", class: 'btn-description' do
           About us
-        %p.btn-buy 
+        =link_to "/buy", class: 'btn-buy' do
           Buy
-        %p.btn-post 
+        =link_to "#", class: 'btn-post' do
           Post
-      = link_to "#", class: "user" do
+      = link_to "/users/new", class: "user" do
         %p.user__name
           Ibuki
   .contents__name
