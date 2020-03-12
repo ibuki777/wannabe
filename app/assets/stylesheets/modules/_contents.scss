@@ -40,26 +40,17 @@
     &__letter{
       height: 100%;
       width: 100%;
+
+      text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      
       &__box{
-        text-align: center;
         &__title{
-          font-size: 60px;
-        // line-height: calc(100vh - 230px);
-        // position: absolute;
-        // top: 10px;
-        // left: 450px;
-        
-
+        font-size: 60px;
         }
 
         &__quote{
-          // position: absolute;
-          // bottom: 150px;
-          // left: 630px;
           font-size: 20px;
         }
       }
