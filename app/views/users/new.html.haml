@@ -1,5 +1,7 @@
 .subscription
+  = image_tag 'scene2.jpg', alt: 'background', height: '100%', width: '100%'
   .subscription__header
+    = image_tag 'logo_xeno.jpg', alt: 'mark', height: '120px', width: '100px', class: 'subscription__header__logo'
     .subscription__header__title
       S u b s c r i p t i o n
   .subscription__form
@@ -9,17 +11,17 @@
           .field-label
             = f.label :user, "名前を入力してください"
           .field-input
-            = f.text_field :name, autofocus: true, placeholder: 'Nickname' , class: 'text'
+            = f.text_field :name, autofocus: true, class: 'text', placeholder: 'Nickname' 
         .field
           .field-label
             = f.label :password, "パスワードを入力してください"
           .field-input
-            = f.password_field :password, autocomplete: "off", class: 'text'
+            = f.password_field :password, autocomplete: "off", class: 'text', placeholder: 'Password'
         .field
           .field-label
             = f.label :password_confirmation, "もう一度入力してください"
           .field-input
-            = f.password_field :password_confirmation, autocomplete: "off", class: 'text'
+            = f.password_field :password_confirmation, autocomplete: "off", class: 'text', placeholder: 'confirmation'
           
         .action
-          = f.submit "Subscript", class: 'subsc'
+          = f.submit "OK?", class: 'subsc'

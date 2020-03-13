@@ -5,31 +5,51 @@
 .subscription{
   height: 100vh;
   width: 100vw;
+  position: relative;
+  color: #ffffff;
 
   &__header{
     height: 150px;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
     background-color: rgba(10,10,10,0.23);
-    color: #ffffff;
+    display: flex;
+    align-items: center;
     text-align: center;
+  
+    &__logo{
+      position: absolute;
+      left: 120px;
+    }
     &__title{
       font-size: 90px;
-      color: #ffffff;
-      line-height: 150px;
+      width: 1000px;
+      margin: 0 auto;
     }
   }
+  
   &__form{
     height: calc(100vh - 150px);
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 150px;
+
     &-separate{
-      border: solid 1px;
-      text-align: center;
       width: 900px;
       padding: 10px 50px;
+      height: 500px;
+      margin: auto 0;
       .field{
+        margin: 40px 0;
+        font-size: 15px;
         &-label{
-      
+          margin-bottom: 10px;
         }    
         &-input{
+          margin-bottom: 10px;
           .text{
             padding: 10px;
             letter-spacing: 1px;
@@ -38,8 +58,11 @@
         }
       }    
       .action{
+        text-align: center;
         .subsc{
-          background-color: #ff1e00;
+          background-color: #8ef1;
+          padding: 20px 50px;
+          color: #ffffff;
         }
       }      
    }
