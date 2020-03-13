@@ -1,12 +1,25 @@
 .subscription
   .subscription__header
     .subscription__header__title
-      Subscription
+      S u b s c r i p t i o n
   .subscription__form
     .subscription__form-separate
-      .subscription__form-separate__name
-        NickName
-      .subscription__form-separate__password
-        パスワードを入力してください
-      .subscription__form-separate__confirmation
-        もう一度入力してください
+      = form_for @user do |f|
+        .field
+          .field-label
+            = f.label :user, "名前を入力してください"
+          .field-input
+            = f.text_field :name, autofocus: true, placeholder: 'Nickname' , class: 'text'
+        .field
+          .field-label
+            = f.label :password, "パスワードを入力してください"
+          .field-input
+            = f.password_field :password, autocomplete: "off", class: 'text'
+        .field
+          .field-label
+            = f.label :password_confirmation, "もう一度入力してください"
+          .field-input
+            = f.password_field :password_confirmation, autocomplete: "off", class: 'text'
+          
+        .action
+          = f.submit "Subscript", class: 'subsc'

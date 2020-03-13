@@ -10,23 +10,38 @@
     height: 150px;
     background-color: rgba(10,10,10,0.23);
     color: #ffffff;
+    text-align: center;
     &__title{
-
+      font-size: 90px;
+      color: #ffffff;
+      line-height: 150px;
     }
   }
   &__form{
-
-    &-seprate{
-
-      &__name{
-
-      }
-      &__password{
-
-      }
-      &__confirmation{
-
-      }
-    }
+    height: calc(100vh - 150px);
+    width: 100vw;
+    &-separate{
+      border: solid 1px;
+      text-align: center;
+      width: 900px;
+      padding: 10px 50px;
+      .field{
+        &-label{
+      
+        }    
+        &-input{
+          .text{
+            padding: 10px;
+            letter-spacing: 1px;
+            width: 100%;
+          }
+        }
+      }    
+      .action{
+        .subsc{
+          background-color: #ff1e00;
+        }
+      }      
+   }
   }
 }
