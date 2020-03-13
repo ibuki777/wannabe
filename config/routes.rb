@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   # resources :posts, only: :index
   resources :users, only: [:new, :create]
   resources :about, only: :index
-  
+  resources :buy,   only: :index
 end
