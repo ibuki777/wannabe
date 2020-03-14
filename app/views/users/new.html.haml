@@ -6,7 +6,7 @@
       S u b s c r i p t i o n
   .subscription__form
     .subscription__form-separate
-      = form_for @user do |f|
+      = form_with model: @user, local: true do |f|
         .field
           .field-label
             = f.label :user, "名前を入力してください"

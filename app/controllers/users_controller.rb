@@ -5,7 +5,11 @@ class UsersController < ApplicationController
 
   def create
     User.create(create_params)
-    render action: :new
+    if @user.save
+      redirect_to new_users_path, notice:”ユーザー「#{@user.name}」を登録しました”
+    else
+      render :new
+    end
   end
 
   private
