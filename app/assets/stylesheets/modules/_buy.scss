@@ -5,10 +5,49 @@
 .buy{
   height: 100vh;
   width: 100vw;
+  
   &__header{
     height: 150px;
     width: 100vw;
     background-color: rgba(10,10,10,0.23);
-    
+    text-align: center;
+
+    &__title{
+      line-height: 150px;
+      font-size: 70px;
+      color: #ffffff;
+    }
+  }
+
+  &__introduce{
+    height: calc(100vh - 150px);
+    width: 100vw;
+    display: flex;
+
+    &__picture{
+      width: 720px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .card{
+
+      }
+    }
+    &__sentence{
+      width: 720px;
+      text-align: center;
+
+      &__letter{
+        height: 450px;
+        border: double;
+        margin: 15px 100px;
+        padding: 60px;
+
+        .image{
+
+        }
+      }
+    }
   }
 }
