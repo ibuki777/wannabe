@@ -1,6 +1,11 @@
 @mixin color {
   color: bisque;
 }
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+  }
 
 *{
   box-sizing: border-box;
@@ -11,51 +16,69 @@
   width: 100vw;
   @include color;
 }
+
+
+
 .contents{
   height: calc(100% - 80px);
   width: 100vw;
-  position: relative;
-
-  &__bar{
-    background-color: rgba(10,10,10,0.23);
-    height: 150px;
-    width: 100%;
+  .img{
+    height: calc(100% - 80px);
+    width: 100vw;
+    background-size: cover;
     position: absolute;
-    top: 0px;
-
-    &__menu{
-      display: flex;
-      justify-content: space-between;
+    z-index: 1;
+  }
+  &__gradation{
+    height: calc(100% - 80px);
+    width: 100vw;
+    position: relative;
+    background: linear-gradient(45deg, rgba(108,184,255,08), rgba(42, 133, 6, 0.8), rgba(93, 93, 95, 0.8));
+    background-size: 600% 600%;
+    animation: AnimationName 10s ease infinite;
+    position: absolute;
+    z-index: 2;
+    &__bar{
+      background-color: rgba(10,10,10,0.23);
       height: 150px;
-      align-items: center;
-      margin: 0 120px;
+      width: 100%;
+      position: absolute;
+      top: 0px;
 
-      &__logo{
+      &__menu{
+        display: flex;
+        justify-content: space-between;
+        height: 150px;
+        align-items: center;
+        margin: 0 120px;
+
+        &__logo{
+        }
       }
     }
-  }
 
-  &__name{
-    height: calc(100% - 150px);
-    width: 100vw;
-    position: absolute;
-    top: 150px;
+    &__name{
+      height: calc(100% - 150px);
+      width: 100vw;
+      position: absolute;
+      top: 150px;
 
-    &__letter{
-      height: 100%;
-      width: 100%;
+      &__letter{
+        height: 100%;
+        width: 100%;
 
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &__box{
-        &__title{
-        font-size: 60px;
-        }
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__box{
+          &__title{
+          font-size: 60px;
+          }
 
-        &__quote{
-          font-size: 20px;
+          &__quote{
+            font-size: 20px;
+          }
         }
       }
     }
@@ -94,17 +117,42 @@
   }
 }
 
-.btn-description:hover {
-  color: #3e5fc0;
+// .btn-description:hover {
+//   color: #ffffff;
+
+// }
+// .btn-buy:hover {
+//   color: #ffffff;
+  
+// }
+// .btn-post:hover {
+//   color: #ffffff;
+// }
+// .user:hover {
+//   color: #ffffff;
+// }
+
+a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
 }
-.btn-buy:hover {
-  color: #3e5fc0;
+a::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
 }
-.btn-post:hover {
-  color: #3e5fc0;
-}
-.user:hover {
-  color: #3e5fc0;
+a:hover::after {
+  bottom: -0px;
+  opacity: 1;
+  visibility: visible;
 }
 
 .posts{
@@ -141,5 +189,5 @@
     }
 
   }
-  
+
 
