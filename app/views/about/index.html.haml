@@ -1,8 +1,21 @@
 .about
   = image_tag 'scene.jpg', alt: 'background', height: '100%', width: '100%'
   .about__header
-    = image_tag 'logo_xeno.jpg', alt: 'mark', height: '120px', width: '100px', class: 'about__header__logo'
-    .about__header__title
-      About  us
+    .about__header__menu
+      = image_tag 'logo_xeno.jpg', alt: 'mark', height: '80px', width: '65px', class: 'about__header__menu__logo'
+      .btn
+        =link_to "/about", class: 'btn-description' do
+          About us
+          %a(href="/users/new")
+        =link_to "/buy", class: 'btn-buy' do
+          Buy
+          %a(href="/users/new")
+        =link_to "#", class: 'btn-post' do
+          Post
+          %a(href="/users/new")
+      = link_to "/users/new", class: "user" do
+        %p.user__name
+          Ibuki
   .about__us
     .about__us__introduce
+      会社の理念、経緯、所在記す

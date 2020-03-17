@@ -1,29 +1,28 @@
 .contents
-  = image_tag 'scene.jpg', alt: 'background', class: 'img'
-  .contents__gradation
-    .contents__gradation__bar
-      .contents__gradation__bar__menu
-        = image_tag 'logo_xeno.jpg', alt: 'mark', height: '120px', width: '100px', class: 'contents__gradation__bar__menu__logo'
-        .btn
-          =link_to "/about", class: 'btn-description' do
-            About us
-            %a(href="/users/new")
-          =link_to "/buy", class: 'btn-buy' do
-            Buy
-            %a(href="/users/new")
-          =link_to "#", class: 'btn-post' do
-            Post
-            %a(href="/users/new")
-        = link_to "/users/new", class: "user" do
-          %p.user__name
-            Ibuki
-    .contents__gradation__name
-      .contents__gradation__name__letter
-        .contents__gradation__name__letter__box
-          .contents__gradation__name__letter__box__title
-            Child Play
-          .contents__gradation__name__letter__box__quote
-            新時代カードゲーム
+  = image_tag 'scene.jpg', alt: 'background',height: '100%', width: '100%', class: 'img'
+  .contents__header
+    .contents__header__menu
+      = image_tag 'logo_xeno.jpg', alt: 'mark', height: '80px', width: '65px', class: 'contents__header__menu__logo'
+      .btn
+        =link_to "/about", class: 'btn-description' do
+          About us
+          %a(href="/users/new")
+        =link_to "/buy", class: 'btn-buy' do
+          Buy
+          %a(href="/users/new")
+        =link_to "#", class: 'btn-post' do
+          Post
+          %a(href="/users/new")
+      = link_to "/users/new", class: "user" do
+        %p.user__name
+          Ibuki
+  .contents__name
+    .contents__name__letter
+      .contents__name__letter__box
+        .contents__name__letter__box__title
+          Cell
+        .contents__name__letter__box__quote
+          新時代カードゲーム
   
 .posts
 .footer

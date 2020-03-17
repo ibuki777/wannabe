@@ -1,9 +1,21 @@
 .subscription
   = image_tag 'scene2.jpg', alt: 'background', height: '100%', width: '100%'
   .subscription__header
-    = image_tag 'logo_xeno.jpg', alt: 'mark', height: '120px', width: '100px', class: 'subscription__header__logo'
-    .subscription__header__title
-      S u b s c r i p t i o n
+    .subscription__header__menu
+      = image_tag 'logo_xeno.jpg', alt: 'mark', height: '80px', width: '65px', class: 'subscription__header__menu__logo'
+      .btn
+        =link_to "/about", class: 'btn-description' do
+          About us
+          %a(href="/users/new")
+        =link_to "/buy", class: 'btn-buy' do
+          Buy
+          %a(href="/users/new")
+        =link_to "#", class: 'btn-post' do
+          Post
+          %a(href="/users/new")
+      = link_to "/users/new", class: "user" do
+        %p.user__name
+          Ibuki
   .subscription__form
     .subscription__form-separate
       = form_with model: @user, local: true do |f|
