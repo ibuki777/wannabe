@@ -1,8 +1,22 @@
 .buy
   %p.kenburns-top
   .buy__header
-    .buy__header__title
-      You want to buy?
+    .buy__header__menu
+      = link_to '/', class: 'buy__header__menu__logo' do
+        = image_tag 'logo_xeno.jpg', alt: 'mark', height: '80px', width: '65px'
+      .btn
+        =link_to "/about", class: 'btn-description' do
+          About us
+          %a(href="/users/new")
+        =link_to "/buy", class: 'btn-buy' do
+          Buy
+          %a(href="/users/new")
+        =link_to "#", class: 'btn-post' do
+          Post
+          %a(href="/users/new")
+      = link_to "/users/new", class: "user" do
+        %p.user__name
+          Ibuki
   .buy__introduce
     .buy__introduce__picture
       = image_tag 'logo_xeno.jpg', alt: 'product', height: '360px', width: '250px', class: 'card'
@@ -10,4 +24,4 @@
       .buy__introduce__sentence__letter
         ここに紹介文を書いていく：ここに紹介文を書いていく：ここに紹介文を書いていく：ここに紹介文を書いていく：ここに紹介文を書いていく
       = link_to 'https://www.amazon.co.jp/', class: 'image' do
-        = image_tag 'buy.jpg', alt: 'background', height: '70px', width: '100px'
+        = image_tag 'buy.jpg', alt: 'background', height: '60px', width: '90px'

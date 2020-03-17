@@ -6,29 +6,28 @@
   height: 100vh;
   width: 100vw;
   &__header{
-    height: 150px;
-    width: 100vw;
+    background-color: rgba(10,10,10,0.23);
+    height: 100px;
+    width: 100%;
     position: absolute;
     top: 0px;
-    background-color: rgba(10,10,10,0.23);
-    display: flex;
-    align-items: center;
-    text-align: center;
 
-    &__logo{
-      position: absolute;
-      left: 120px;
-    }
-    &__title{
-      color: #ffffff;
-      font-size: 100px;
-      width: 1000px;
-      margin: 0 auto;
+    &__menu{
+      display: flex;
+      justify-content: space-between;
+      height: 100px;
+      align-items: center;
+      margin: 0 120px;
+
+      &__logo{
+      }
     }
   }
   &__us{
     &__introduce{
-
+      position: absolute;
+      top: 100px;
+      color: #ffffff;
     }
   }
 }
