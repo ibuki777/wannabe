@@ -16,7 +16,7 @@
 
 
 .contents{
-  height: calc(100% - 80px);
+  height: 100%;
   width: 100vw;
   &__header{
     background-color: rgba(10,10,10,0.23);
@@ -41,7 +41,7 @@
     height: calc(100% - 150px);
     width: 100vw;
     position: absolute;
-    top: 150px;
+    top: 100px;
 
     &__letter{
       height: 100%;
@@ -91,7 +91,7 @@
 .user{
   @include color;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 15px;
   transition: all  0.5s ease;
   &__name{
 
@@ -122,8 +122,26 @@ a:hover::after {
   visibility: visible;
 }
 
-.posts{
-
+.explain{
+  height: 100%;
+  width: 100vw;
+  color: black;
+  &__box{
+    height: 100%;
+    width: 100%;
+    padding: 50px 100px;
+    &__card{
+      display: flex;
+      justify-content: center;
+      &__figure{
+        margin-left: 70px;
+      }
+      &__game{
+        line-height: 500px;
+        text-align: center;
+      }
+    }
+  }
 }
 
 .footer{
