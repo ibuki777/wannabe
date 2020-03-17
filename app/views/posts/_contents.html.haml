@@ -10,12 +10,12 @@
         =link_to "/buy", class: 'btn-buy' do
           Buy
           %a(href="/users/new")
-        =link_to "#", class: 'btn-post' do
-          Post
-          %a(href="/users/new")
+        -# =link_to "#", class: 'btn-post' do
+        -#   Post
+        -#   %a(href="/users/new")
       = link_to "/users/new", class: "user" do
         %p.user__name
-          Ibuki
+          口コミ(仮)
   .contents__name
     .contents__name__letter
       .contents__name__letter__box
@@ -24,7 +24,15 @@
         .contents__name__letter__box__quote
           新時代カードゲーム
   
-.posts
+.explain
+  .explain__box
+    .explain__box__card
+      カードゲームの種類を記述(何ゲーなのか)?
+      .explain__box__card__figure
+        図で前世代との比較を語る
+    .explain__box__card__game
+      煽るようなキャッチコピー?
+
 .footer
   = image_tag 'logo_xeno.jpg', alt: 'mark', height: '60px', width: '45px', class: 'footer__logo'
   = link_to "#", class: "footer__form" do
