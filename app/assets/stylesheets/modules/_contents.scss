@@ -18,6 +18,12 @@
 .contents{
   height: 100%;
   width: 100vw;
+  background-color: black;
+  .img{
+    background-image: url('scene.jpg');
+    background-size: cover;
+    background-position: center;
+  }
   &__header{
     background-color: rgba(10,10,10,0.23);
     height: 100px;
